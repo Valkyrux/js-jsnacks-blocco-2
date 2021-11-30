@@ -27,7 +27,11 @@ function getFullNames (firstNames, lastNames, numberofFullnames) {
 function getRandom (maxNumber) {
     return Math.floor(Math.random()*(maxNumber - 1) + 1);
 }
-
+// inserire l'input
 let numberOfGuest = parseInt(prompt("Inserisci il numero di invitati da generare"));
+while (isNan(numberOfGuest)) {
+    numberOfGuest = parseInt(prompt("Inserisci il numero di invitati da generare"));
+}
+// stampare il risultato
 console.log(getFullNames(userFirstNames, userLastNames, numberOfGuest));
 
