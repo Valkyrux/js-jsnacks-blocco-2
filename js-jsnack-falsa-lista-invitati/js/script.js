@@ -6,10 +6,10 @@ function getFullNames (firstNames, lastNames, numberofFullnames) {
     let listOfFullNames = [];
     // il numero di elementi da generare può variare, imposto un valore massimo per fare bloccare il prima il ciclo
     let numOfIteration = 0;
-    if (numberofFullnames <= (firstNames.length - 1)*(lastNames.length - 1) && numberofFullnames > 0) {
+    if (numberofFullnames <= firstNames.length * lastNames.length && numberofFullnames > 0) {
         numOfIteration = numberofFullnames;
-    } else if (numberofFullnames > (firstNames.length - 1)*(lastNames.length - 1)) {
-        numOfIteration = (firstNames.length - 1)*(lastNames.length - 1);
+    } else if (numberofFullnames > firstNames.length * lastNames.length) {
+        numOfIteration = firstNames.length * lastNames.length;
     }
     let i = 0;
     while (i < numOfIteration) {
@@ -25,7 +25,7 @@ function getFullNames (firstNames, lastNames, numberofFullnames) {
 }
 // funzione che genera un numero random da 1 a maxNumber
 function getRandom (maxNumber) {
-    return Math.floor(Math.random()*(maxNumber - 1) + 1);
+    return Math.floor(Math.random()*(maxNumber + 1));
 }
 // inserire l'input
 let numberOfGuest = parseInt(prompt("Inserisci il numero di invitati da generare"));
