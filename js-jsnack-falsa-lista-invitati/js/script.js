@@ -23,9 +23,9 @@ function getFullNames (firstNames, lastNames, numberofFullnames) {
     }
     return listOfFullNames;
 }
-// funzione che genera un numero random da 1 a maxNumber
+// funzione che genera un numero random da 0 a maxNumber
 function getRandom (maxNumber) {
-    return Math.floor(Math.random()*(maxNumber + 1));
+    return Math.floor(Math.random()*maxNumber);
 }
 // inserire l'input
 let numberOfGuest = parseInt(prompt("Inserisci il numero di invitati da generare"));
