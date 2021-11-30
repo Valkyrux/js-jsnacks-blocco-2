@@ -29,7 +29,7 @@ function getRandom (maxNumber) {
 }
 // inserire l'input
 let numberOfGuest = parseInt(prompt("Inserisci il numero di invitati da generare"));
-while (isNan(numberOfGuest)) {
+while (isNaN(numberOfGuest)) {
     numberOfGuest = parseInt(prompt("Inserisci il numero di invitati da generare"));
 }
 // stampare il risultato
